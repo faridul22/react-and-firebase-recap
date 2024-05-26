@@ -1,15 +1,14 @@
+import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/HomeComponets/Banner";
 import Products from "../../components/HomeComponets/Products";
-import Footer from "../../components/Shared/Footer";
-import Navbar from "../../components/Shared/Navbar";
 
 const Home = () => {
+    const foods = useLoaderData();
+    console.log(foods)
     return (
         <div>
-            <Navbar />
             <Banner />
-            <Products />
-            <Footer />
+            <Products foods={foods} />
         </div>
     );
 };
