@@ -7,6 +7,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Register from "../Pages/Register/Register";
+import FoodDetails from "../Pages/FoodDetails/FoodDetails";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: () => fetch("http://localhost:3000/foods")
+      },
+      {
+        path: "/foodDetails/:id",
+        element: <FoodDetails />,
+        loader: ({ params }) => fetch(`http://localhost:3000/foods/${params.id}`)
       },
       {
         path: "/login",

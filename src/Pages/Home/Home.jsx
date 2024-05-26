@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/HomeComponets/Banner";
-import Products from "../../components/HomeComponets/Products";
+import Foods from "../../components/HomeComponets/Foods";
 
 const Home = () => {
     const foods = useLoaderData();
@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <Products foods={foods} />
+            <Foods foods={foods} />
         </div>
     );
 };

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 
-const ProductCard = ({ food }) => {
-    console.log(food)
-    const { title, price, cooking_time, description, } = food
+const FoodCard = ({ food }) => {
+
+    const { id, title, price, cooking_time, description, } = food
     return (
         <div className="card w-full bg-base-100 shadow-xl">
             <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
@@ -14,11 +15,13 @@ const ProductCard = ({ food }) => {
                 </div>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">
+                        <Link to={`/foodDetails/${id}`}>See Details</Link>
+                    </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
-export default ProductCard;
+export default FoodCard;

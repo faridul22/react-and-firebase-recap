@@ -1,18 +1,19 @@
 
-import ProductCard from './ProductCard';
+import FoodCard from './FoodCard';
 
-const Products = ({ foods }) => {
+
+const Foods = ({ foods }) => {
     console.log(foods)
     return (
         <div className='w-11/12 mx-auto'>
             <h1 className='my-8 text-center text-2xl font-semibold'>OUR MENU</h1>
             <div className='grid grid-cols-3 justify-center gap-4 '>
                 {
-                    foods.slice(0, 6).map(food => <ProductCard key={food.id} food={food} />)
+                    foods.slice(0, 6).map(food => <FoodCard key={food.id} food={food} />)
                 }
             </div>
         </div>
     );
 };
 
-export default Products;
+export default Foods;
