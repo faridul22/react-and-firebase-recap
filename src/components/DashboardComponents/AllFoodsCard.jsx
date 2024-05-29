@@ -1,9 +1,29 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const AllFoodsCard = ({ foodData }) => {
+const AllFoodsCard = ({ foodData, onDelete }) => {
 
     const { id, title, price, cooking_time, description, } = foodData;
+
+    const handleDelete = async () => {
+        await fetch(`http://localhost:3000/foods/${id}`, {
+            method: "DELETE",
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                onDelete(id)
+
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Your file has been deleted.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+    }
 
     return (
         <div className="card card-side bg-base-100 shadow-xl my-5">
@@ -22,7 +42,7 @@ const AllFoodsCard = ({ foodData }) => {
                     <button className="btn bg-emerald-500 text-white hover:bg-emerald-600">
                         <Link to={`/edit/${id}`}>Edit</Link>
                     </button>
-                    <button className="btn bg-red-700 text-white hover:bg-red-800">Delete</button>
+                    <button onClick={handleDelete} className="btn bg-red-700 text-white hover:bg-red-800">Delete</button>
                 </div>
             </div>
         </div>

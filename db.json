@@ -1,84 +1,44 @@
 {
-    "foods": [
-        {
-            "id": 1,
-            "title": "Margherita Pizza",
-            "price": 12.99,
-            "cooking_time": "20 minutes",
-            "description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil.",
-            "img_url": "https://example.com/images/margherita_pizza.jpg"
-        },
-        {
-            "id": 2,
-            "title": "Cheeseburger",
-            "price": 10.49,
-            "cooking_time": "15 minutes",
-            "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
-            "img_url": "https://example.com/images/cheeseburger.jpg"
-        },
-        {
-            "id": 3,
-            "title": "Caesar Salad",
-            "price": 8.99,
-            "cooking_time": "10 minutes",
-            "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
-            "img_url": "https://example.com/images/caesar_salad.jpg"
-        },
-        {
-            "id": 4,
-            "title": "Spaghetti Carbonara",
-            "price": 14.49,
-            "cooking_time": "25 minutes",
-            "description": "Pasta with creamy sauce, pancetta, egg, and Parmesan cheese.",
-            "img_url": "https://example.com/images/spaghetti_carbonara.jpg"
-        },
-        {
-            "id": 5,
-            "title": "Grilled Salmon",
-            "price": 18.99,
-            "cooking_time": "30 minutes",
-            "description": "Fresh salmon fillet grilled to perfection with lemon and herbs.",
-            "img_url": "https://example.com/images/grilled_salmon.jpg"
-        },
-        {
-            "id": 6,
-            "title": "Chicken Tikka Masala",
-            "price": 16.49,
-            "cooking_time": "35 minutes",
-            "description": "Tender chicken pieces in a rich and creamy tomato sauce with spices.",
-            "img_url": "https://example.com/images/chicken_tikka_masala.jpg"
-        },
-        {
-            "id": 7,
-            "title": "Vegetable Stir Fry",
-            "price": 11.99,
-            "cooking_time": "20 minutes",
-            "description": "A mix of fresh vegetables stir-fried with soy sauce and sesame oil.",
-            "img_url": "https://example.com/images/vegetable_stir_fry.jpg"
-        },
-        {
-            "id": 8,
-            "title": "Beef Tacos",
-            "price": 13.49,
-            "cooking_time": "15 minutes",
-            "description": "Soft tortillas filled with seasoned beef, lettuce, cheese, and salsa.",
-            "img_url": "https://example.com/images/beef_tacos.jpg"
-        },
-        {
-            "id": 9,
-            "title": "Margarita",
-            "price": 8.99,
-            "cooking_time": "5 minutes",
-            "description": "Classic cocktail made with tequila, lime juice, and triple sec.",
-            "img_url": "https://example.com/images/margarita.jpg"
-        },
-        {
-            "id": 10,
-            "title": "Chocolate Cake",
-            "price": 6.99,
-            "cooking_time": "45 minutes",
-            "description": "Rich and moist chocolate cake topped with chocolate ganache.",
-            "img_url": "https://example.com/images/chocolate_cake.jpg"
-        }
-    ]
+  "foods": [
+    {
+      "id": "1",
+      "title": "Margherita Pizza",
+      "price": 12.99,
+      "cooking_time": "20 minutes",
+      "description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil.",
+      "img_url": "https://example.com/images/margherita_pizza.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Cheeseburger",
+      "price": 10.49,
+      "cooking_time": "15 minutes",
+      "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
+      "img_url": "https://example.com/images/cheeseburger.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Caesar Salad",
+      "price": 8.99,
+      "cooking_time": "10 minutes",
+      "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
+      "img_url": "https://example.com/images/caesar_salad.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Spaghetti Carbonara",
+      "price": 14.49,
+      "cooking_time": "25 minutes",
+      "description": "Pasta with creamy sauce, pancetta, egg, and Parmesan cheese.",
+      "img_url": "https://example.com/images/spaghetti_carbonara.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Grilled Salmon",
+      "price": 18.99,
+      "cooking_time": "30 minutes",
+      "description": "Fresh salmon fillet grilled to perfection with lemon and herbs.",
+      "img_url": "https://example.com/images/grilled_salmon.jpg"
+    }
+  ]
 }
