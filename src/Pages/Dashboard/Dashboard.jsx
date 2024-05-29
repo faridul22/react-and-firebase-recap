@@ -3,7 +3,7 @@
 const Dashboard = () => {
     return (
         <div>
-            This is dashboard
+            User information coming soon.
         </div>
     );
 };

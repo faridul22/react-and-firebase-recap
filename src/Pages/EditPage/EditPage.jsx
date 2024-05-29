@@ -18,7 +18,7 @@ const EditPage = () => {
         const newImg_url = form.img_url.value;
         const newDescription = form.description.value;
 
-        const editedData = { title: newTitle, price: newPrice, cookingTime: newCookingTime, description: newDescription, img_url: newImg_url }
+        const editedData = { title: newTitle, price: newPrice, cooking_time: newCookingTime, description: newDescription, img_url: newImg_url }
 
         console.log(editedData)
 

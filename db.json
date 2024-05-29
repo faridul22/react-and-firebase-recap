@@ -2,18 +2,19 @@
   "foods": [
     {
       "id": "1",
-      "title": "Margherita Pizza",
-      "price": 12.99,
+      "title": "Margherita Pizzaa",
+      "price": "15.99",
       "cooking_time": "20 minutes",
       "description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil.",
-      "img_url": "https://i.ibb.co/NLGwmmC/top-view-delicious-noodles-concept.jpg"
+      "img_url": "https://i.ibb.co/NLGwmmC/top-view-delicious-noodles-concept.jpg",
+      "cookingTime": "70 minutes"
     },
     {
       "id": "2",
-      "title": "Cheeseburger",
-      "price": 10.49,
-      "cooking_time": "15 minutes",
-      "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
+      "title": "Cheeseburgerrrr",
+      "price": "16.49",
+      "cooking_time": "1.5 minutes",
+      "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.ff",
       "img_url": "https://i.ibb.co/TgdKYj1/chicken-stir-fry-vegetables.jpg"
     },
     {
