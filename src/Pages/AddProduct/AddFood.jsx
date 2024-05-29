@@ -1,16 +1,43 @@
+import Swal from "sweetalert2";
 
 
 const AddFood = () => {
 
-    const handleAdd = (event) => {
+    const handleAdd = async (event) => {
         event.preventDefault();
         const form = event.target;
         const title = form.title.value;
         const price = form.price.value;
-        const cookingTime = form.cooking_time.value;
+        const cooking_time = form.cooking_time.value;
+        const img_url = form.img_url.value;
         const id = form.id.value;
         const description = form.description.value;
-        console.log(title, price, cookingTime, id, description)
+
+        const newData = { title, price, cooking_time, id, description, img_url }
+        console.log(newData)
+
+        await fetch("http://localhost:3000/foods/", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data.id)
+                if (data.id == id) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Your file has been added",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+
+                }
+                form.reset();
+            })
     }
 
 
@@ -39,7 +66,13 @@ const AddFood = () => {
                             <label className="label">
                                 <span className="label-text">Cooking Time</span>
                             </label>
-                            <input name="cooking_time" type="text" placeholder="Cooking time" className="input input-bordered" required />
+                            <input name="cooking_time" type="text" placeholder="Cooking time: minutes" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Image URL</span>
+                            </label>
+                            <input name="img_url" type="url" placeholder="Image URL" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

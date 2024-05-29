@@ -3,11 +3,11 @@ import { useLoaderData } from "react-router-dom";
 
 const FoodDetails = () => {
     const food = useLoaderData();
-    const { id, title, price, cooking_time, description, } = food
+    const { id, title, price, cooking_time, description, img_url } = food
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl w-3/4 mx-auto my-9">
             <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" />
+                <img className="w-[700px] h-full" src={img_url} alt="foods" />
             </figure>
             <div className="card-body">
                 <h2 className="font-bold text-2xl mb-2 text-center">{title}</h2>

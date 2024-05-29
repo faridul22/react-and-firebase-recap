@@ -6,7 +6,7 @@
       "price": 12.99,
       "cooking_time": "20 minutes",
       "description": "Classic pizza topped with fresh mozzarella, tomatoes, and basil.",
-      "img_url": "https://example.com/images/margherita_pizza.jpg"
+      "img_url": "https://i.ibb.co/NLGwmmC/top-view-delicious-noodles-concept.jpg"
     },
     {
       "id": "2",
@@ -14,15 +14,16 @@
       "price": 10.49,
       "cooking_time": "15 minutes",
       "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
-      "img_url": "https://example.com/images/cheeseburger.jpg"
+      "img_url": "https://i.ibb.co/TgdKYj1/chicken-stir-fry-vegetables.jpg"
     },
     {
       "id": "3",
       "title": "Caesar Salad",
-      "price": 8.99,
+      "price": "8.99",
       "cooking_time": "10 minutes",
       "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
-      "img_url": "https://example.com/images/caesar_salad.jpg"
+      "img_url": "https://i.ibb.co/Fqgzcm9/high-angle-traditional-asian-meal-with-chopsticks.jpg",
+      "cookingTime": "10 minutes"
     },
     {
       "id": "4",
@@ -30,7 +31,7 @@
       "price": 14.49,
       "cooking_time": "25 minutes",
       "description": "Pasta with creamy sauce, pancetta, egg, and Parmesan cheese.",
-      "img_url": "https://example.com/images/spaghetti_carbonara.jpg"
+      "img_url": "https://i.ibb.co/k4XBbGH/high-angle-japanese-dumplings-composition.jpg"
     },
     {
       "id": "5",
@@ -38,7 +39,23 @@
       "price": 18.99,
       "cooking_time": "30 minutes",
       "description": "Fresh salmon fillet grilled to perfection with lemon and herbs.",
-      "img_url": "https://example.com/images/grilled_salmon.jpg"
+      "img_url": "https://i.ibb.co/JdzFS7H/top-view-asian-dish-with-rice-chopsticks.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Chicken Tikka Masala\"",
+      "price": "34.5",
+      "cooking_time": "30 minutes",
+      "description": "Tender chicken pieces in a rich and creamy tomato sauce with spices.",
+      "img_url": "https://i.ibb.co/NLGwmmC/top-view-delicious-noodles-concept.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Vegetable Stir Fry",
+      "price": "60",
+      "cooking_time": "20 minutes",
+      "description": "A mix of fresh vegetables stir-fried with soy sauce and sesame oil.",
+      "img_url": "https://i.ibb.co/NLGwmmC/top-view-delicious-noodles-concept.jpg"
     }
   ]
 }

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const AllFoodsCard = ({ foodData, onDelete }) => {
 
-    const { id, title, price, cooking_time, description, } = foodData;
+    const { id, title, price, cooking_time, description, img_url } = foodData;
 
     const handleDelete = async () => {
         await fetch(`http://localhost:3000/foods/${id}`, {
@@ -28,7 +28,7 @@ const AllFoodsCard = ({ foodData, onDelete }) => {
     return (
         <div className="card card-side bg-base-100 shadow-xl my-5">
             <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" />
+                <img className="w-[400px] h-full" src={img_url} alt="foods" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>

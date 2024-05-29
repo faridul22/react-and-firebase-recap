@@ -1,19 +1,49 @@
+// import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditPage = () => {
     const food = useLoaderData();
-    console.log(food)
-    const { id, title, price, cooking_time, description, } = food;
 
-    const handleEdit = (event) => {
+    // const [id, setId] = useState(food.id)
+
+    const { id, title, price, cooking_time, description, img_url } = food;
+
+    const handleEdit = async (event) => {
         event.preventDefault();
         const form = event.target;
-        const title = form.title.value;
-        const price = form.price.value;
-        const cookingTime = form.cooking_time.value;
-        const description = form.description.value;
-        console.log(title, price, cookingTime, description)
+        const newTitle = form.title.value;
+        const newPrice = form.price.value;
+        const newCookingTime = form.cooking_time.value;
+        const newImg_url = form.img_url.value;
+        const newDescription = form.description.value;
+
+        const editedData = { title: newTitle, price: newPrice, cookingTime: newCookingTime, description: newDescription, img_url: newImg_url }
+
+        console.log(editedData)
+
+        await fetch(`http://localhost:3000/foods/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(editedData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Your data successfully updated.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+
     }
+
     return (
         <div className=" min-h-screen bg-base-200">
             <div className="py-16">
@@ -43,9 +73,15 @@ const EditPage = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
+                                <span className="label-text">Image URL</span>
+                            </label>
+                            <input name="img_url" type="url" placeholder="image URL" className="input input-bordered" defaultValue={img_url} required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
                                 <span className="label-text">Description</span>
                             </label>
-                            <textarea name="description" cols="30" rows="10" placeholder="Description" className="input input-bordered p-5" defaultValue={description} required id="" />
+                            <textarea name="description" cols="30" rows="10" placeholder="Description" className="input input-bordered h-[150px] p-5" defaultValue={description} required id="" />
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn bg-emerald-500 text-white hover:bg-emerald-600">Edit Confirm</button>
