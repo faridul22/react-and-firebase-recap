@@ -14,7 +14,7 @@ const FoodDetails = () => {
                 <p><span className="font-semibold">About {title}</span>: {description}</p>
                 <div className="card-actions justify-end">
                     <div className="badge badge-outline font-semibold">Food ID: {id}</div>
-                    <div className="badge badge-outline font-semibold">${price}</div>
+                    <div className="badge badge-outline font-semibold">Price: ${price}</div>
                     <div className="badge badge-outline font-semibold">Cooking: {cooking_time}</div>
                 </div>
             </div>

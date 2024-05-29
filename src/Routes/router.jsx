@@ -8,6 +8,9 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Register from "../Pages/Register/Register";
 import FoodDetails from "../Pages/FoodDetails/FoodDetails";
+import AllFoods from "../Pages/AllProduct/AllFoods";
+import EditPage from "../Pages/EditPage/EditPage";
+import AddProduct from "../Pages/AddProduct/AddFood";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />
+      },
+      {
+        path: "/edit/:id",
+        element: <EditPage />,
+        loader: ({ params }) => fetch(`http://localhost:3000/foods/${params.id}`)
       }
     ]
   },
@@ -47,7 +55,17 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Dashboard />
+      },
+      {
+        path: "dashboard/all_food",
+        element: <AllFoods />,
+        loader: () => fetch("http://localhost:3000/foods")
+      },
+      {
+        path: "dashboard/add_product",
+        element: <AddProduct />
       }
+
     ]
   }
 ]);

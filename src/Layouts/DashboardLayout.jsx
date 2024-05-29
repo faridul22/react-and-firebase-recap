@@ -8,10 +8,12 @@ const DashboardLayout = () => {
             {/* <Navbar /> */}
             <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
+                <div className="drawer-content flex items-center justify-center">
                     {/* Page content here */}
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-                    <Outlet />
+                    <div className="w-[90%]">
+                        <Outlet />
+                    </div>
 
                 </div>
                 <div className="drawer-side">
@@ -22,7 +24,10 @@ const DashboardLayout = () => {
                             <Link to="">Dashboard</Link>
                         </li>
                         <li>
-                            <Link to="allProduct">All Products</Link>
+                            <Link to="dashboard/all_food">All Foods</Link>
+                        </li>
+                        <li>
+                            <Link to="dashboard/add_product">Add A Food</Link>
                         </li>
                         <li>
                             <Link to="/">Home</Link>
